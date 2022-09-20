@@ -8,7 +8,8 @@
 
     "consumer-run": "node login-service/",
     "consumer-component-test": "jest --testPathPattern=login-service/tests",
-    "provider-run": "node user-service/"
+    "provider-run": "node user-service/",
+    "provider-component-test": "jest --testPathPattern=user-service/tests"
   },
   "author": "up1",
   "license": "ISC",
