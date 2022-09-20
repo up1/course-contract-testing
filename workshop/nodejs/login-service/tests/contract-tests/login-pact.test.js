@@ -50,4 +50,32 @@ test("Success to get user detail", async () => {
       }
     );
   });
-});    
+}); 
+
+
+
+test("Failure :: User not found", async () => {
+  // set up Pact interactions
+  await provider.addInteraction({
+    states: [{ description: "user not found" }],
+    uponReceiving: "get user by id = 2",
+    withRequest: {
+      method: "GET",
+      path: "/users/2",
+    },
+    willRespondWith: {
+      status: 404
+    },
+  });
+
+  await provider.executeTest(async (mockService) => {
+    const service = new UserService(mockService.url);
+    // make request to Pact mock server
+    const response = await service.getUserById(2);
+    expect(response).toStrictEqual(
+      {
+        code: 404
+      }
+    );
+  });
+}); 
