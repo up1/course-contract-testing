@@ -11,3 +11,4 @@
   
 ## Resources
 * [How Pact contract testing works](https://pactflow.io/how-pact-works/#slide-1)
+* [Increasing collaboration and confidence with Consumer-Driven Contracts testing](https://blog.pvincent.io/2017/03/increasing-collaboration-and-confidence-with-consumer-driven-contracts-testing/)
