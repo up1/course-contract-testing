@@ -9,7 +9,8 @@
     "consumer-component-test": "jest --testPathPattern=login-service/tests",
     "consumer-contract-test": "jest --testPathPattern=login-service/tests/contract-tests",
     "provider-run": "node user-service/",
-    "provider-component-test": "jest --testPathPattern=user-service/tests"
+    "provider-component-test": "jest --testPathPattern=user-service/tests/component-tests",
+    "provider-contract-test": "jest --testTimeout=10000 --testPathPattern=user-service/tests/contract-tests"
   },
   "author": "up1",
   "license": "ISC",

@@ -8,11 +8,15 @@ server.use((_, res, next) => {
 });
 
 server.get("/users/:id", (req, res) => {
-	res.json({
-        user: "somkiat",
-        name: "Somkiat Pui",
-        role: "admin"
-      });
+  if(req.params.id == 1) {
+    res.json({
+          user: "somkiat",
+          name: "Somkiat Pui",
+          role: "admin"
+        });
+  } else {
+    res.status(404).send('User not found')
+  }
 });
 
 module.exports = {

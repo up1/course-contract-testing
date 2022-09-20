@@ -1,5 +1,5 @@
 const request = require("supertest");
-const { server } = require("../user");
+const { server } = require("../../user");
 
 const expectedUser = {
   user: "somkiat",
