@@ -118,11 +118,11 @@ func setup() {
 
 func createPact() dsl.Pact {
 	return dsl.Pact{
-		Consumer: "login-service",
-		Provider: "user-service",
-		LogDir:   "../logs",
-		PactDir:  "../pacts",
-		LogLevel: "INFO",
+		Consumer:                 "login-service",
+		Provider:                 "user-service",
+		LogDir:                   "../logs",
+		PactDir:                  "../pacts",
+		LogLevel:                 "INFO",
 		DisableToolValidityCheck: true,
 	}
 }
