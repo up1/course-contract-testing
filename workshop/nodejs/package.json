@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "consumer-run": "node login-service/",
-    "consumer-component-test": "jest --testPathPattern=login-service/tests",
+    "consumer-component-test": "jest --testPathPattern=login-service/tests/component-tests",
     "consumer-contract-test": "jest --testPathPattern=login-service/tests/contract-tests",
     "provider-run": "node user-service/",
     "provider-component-test": "jest --testPathPattern=user-service/tests/component-tests",

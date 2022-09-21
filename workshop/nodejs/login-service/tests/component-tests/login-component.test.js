@@ -1,4 +1,4 @@
-const UserService = require("../gateway");
+const UserService = require("../../gateway");
 const nock = require("nock");
 
 const URL = "http://127.0.0.1:4000";
