@@ -8,6 +8,6 @@ import (
 
 func main() {
 	router := web.NewRouter()
-	router.POST("/users/:id", user_service.GetAccountByIdHandler())
+	router.GET("/users/:id", user_service.GetAccountByIdHandler())
 	web.ServeHttp(":4000", "user_service", router)
 }
