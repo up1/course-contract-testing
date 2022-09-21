@@ -1,0 +1,45 @@
+version: "3"
+
+services:
+  postgres:
+    image: postgres
+    healthcheck:
+      test: psql postgres --command "select 1" -U postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: postgres
+
+  pact_broker:
+    image: pactfoundation/pact-broker
+    ports:
+      - 8000:9292
+    environment:
+      PACT_BROKER_BASIC_AUTH_USERNAME: pact_workshop
+      PACT_BROKER_BASIC_AUTH_PASSWORD: pact_workshop
+      PACT_BROKER_DATABASE_USERNAME: postgres
+      PACT_BROKER_DATABASE_PASSWORD: password
+      PACT_BROKER_DATABASE_HOST: postgres
+      PACT_BROKER_DATABASE_NAME: postgres
+
+  pact_broker_publish:
+    image: pactfoundation/pact-cli
+    environment:
+      PACT_BROKER_BASE_URL: http://pact_broker:9292
+      PACT_BROKER_USERNAME: pact_workshop
+      PACT_BROKER_PASSWORD: pact_workshop
+    command: 'publish /pacts --consumer-app-version 1.0.0'
+    volumes:
+      - ./pacts:/pacts
+
+  pact_broker_verify:
+    image: pactfoundation/pact-cli
+    environment:
+      PACT_BROKER_BASE_URL: http://pact_broker:9292
+      PACT_BROKER_USERNAME: pact_workshop
+      PACT_BROKER_PASSWORD: pact_workshop
+      PACT_BROKER_PUBLISH_VERIFICATION_RESULTS: true
+    command: 'verify  --provider-base-url http://host.docker.internal:4000 --provider user-service --provider-app-version 1.0.0 --wait 10'
+    

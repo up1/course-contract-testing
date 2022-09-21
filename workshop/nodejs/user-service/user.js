@@ -8,6 +8,7 @@ server.use((_, res, next) => {
 });
 
 server.get("/users/:id", (req, res) => {
+  console.log("Request= ", req.params.id)
   if(req.params.id == 1) {
     res.json({
           user: "somkiat",
