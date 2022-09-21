@@ -11,14 +11,14 @@ import (
 )
 
 var (
-	ErrNotFound = errors.New("not found")
+	ErrNotFound    = errors.New("not found")
 	ErrUnavailable = errors.New("api unavailable")
 )
 
 type User struct {
 	User string `json:"user" pact:"example=somkiat"`
-	Name  string `json:"name" pact:"example=Somkiat Pui"`
-	Role      string `json:"role" pact:"example=admin,regex=^(admin|user|guest)$"`
+	Name string `json:"name" pact:"example=Somkiat Pui"`
+	Role string `json:"role" pact:"example=admin,regex=^(admin|user|guest)$"`
 }
 
 type Gateway struct {

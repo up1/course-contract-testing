@@ -5,7 +5,6 @@ import (
 	"demo/user_service"
 )
 
-
 func main() {
 	router := web.NewRouter()
 	router.GET("/users/:id", user_service.GetAccountByIdHandler())

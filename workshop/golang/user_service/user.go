@@ -9,8 +9,8 @@ import (
 
 type Response struct {
 	User string `json:"user"`
-	Name  string `json:"name"`
-	Role  string `json:"role"`
+	Name string `json:"name"`
+	Role string `json:"role"`
 }
 
 func GetAccountByIdHandler() gin.HandlerFunc {
