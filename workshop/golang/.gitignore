@@ -1,3 +1,4 @@
-temp/
-logs/
-pacts/
+/temp/
+/logs/
+/log/
+/pacts/

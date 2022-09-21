@@ -1,3 +1,5 @@
+//go:build consumer
+
 package login_service_test
 
 import (
@@ -81,7 +83,6 @@ func TestClientPact_GetUserById(t *testing.T) {
 			}).
 			WillRespondWith(dsl.Response{
 				Status:  404,
-				Headers: commonHeaders,
 			})
 
 		err := pact.Verify(func() error {
