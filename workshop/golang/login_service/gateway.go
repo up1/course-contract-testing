@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"io/ioutil"
+	"io"
 	"net/http"
 	"net/url"
 	"os"
@@ -22,8 +22,7 @@ type User struct {
 }
 
 type Gateway struct {
-	BaseURL    *url.URL
-	httpClient *http.Client
+	BaseURL *url.URL
 }
 
 func (c *Gateway) GetUser(id int) (*User, error) {
@@ -45,7 +44,7 @@ func (c *Gateway) GetUser(id int) (*User, error) {
 		return nil, ErrUnavailable
 	}
 
-	body, err := ioutil.ReadAll(res.Body)
+	body, err := io.ReadAll(res.Body)
 	if err != nil {
 		panic(err)
 	}
