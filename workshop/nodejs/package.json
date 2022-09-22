@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "consumer-run": "node login-service/",
     "provider-run": "node user-service/"
   },
@@ -13,5 +13,8 @@
   "dependencies": {
     "axios": "^0.27.2",
     "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "jest": "^29.0.3"
   }
 }
