@@ -6,6 +6,7 @@
   "scripts": {
     "test": "jest",
     "consumer-run": "node login-service/",
+    "consumer-test": "jest --testTimeout=10000 --testPathPattern=login-service/",
     "provider-run": "node user-service/",
     "provider-verify": "jest --testTimeout=10000 --testPathPattern=user-service/"
   },
