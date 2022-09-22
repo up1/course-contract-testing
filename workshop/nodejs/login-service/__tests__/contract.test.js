@@ -13,7 +13,7 @@ const provider = new PactV3({
   log: path.resolve(process.cwd(), "logs", "pact.log"),
   logLevel: "warn",
   dir: path.resolve(process.cwd(), "pacts"),
-  spec: SpecificationVersion.SPECIFICATION_VERSION_V2,
+  spec: SpecificationVersion.SPECIFICATION_VERSION_V4,
 });
 
 test("Success to get user detail", async () => {
