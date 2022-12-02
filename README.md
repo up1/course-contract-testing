@@ -4,6 +4,7 @@
 * [Working with Pact](https://github.com/up1/course-contract-testing/wiki)
   * NodeJS
   * Go
+  * [C#](https://github.com/up1/course-tdd-with-dotnet)
 * Workshop
   * Write Pact consumer test
   * Verify consumer pact with API provider
