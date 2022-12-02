@@ -1,4 +1,4 @@
-# Course :: Contract testing with [Pact](https://docs.pact.io/)
+# Course :Contract testing with [Pact](https://docs.pact.io/)
 * Problem
 * Contract testing
 * [Working with Pact](https://github.com/up1/course-contract-testing/wiki)
