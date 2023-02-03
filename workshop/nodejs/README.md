@@ -9,7 +9,7 @@ $npm install
 $npm run consumer-run
 ```
 
-## Step to run consumer :: User service (port = 4000)
+## Step to run provider :: User service (port = 4000)
 Run user service
 ```
 $npm install
