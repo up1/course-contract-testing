@@ -1,5 +1,5 @@
 const supertest = require("supertest");
-const { server } = require("../user");
+const { server } = require("../../user");
 
 test("Success case with Get user by id = 1", async () => {
   await supertest(server)

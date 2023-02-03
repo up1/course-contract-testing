@@ -1,4 +1,4 @@
-const UserService = require("../gateway");
+const UserService = require("../../gateway");
 const path = require("path");
 const {
   PactV3,

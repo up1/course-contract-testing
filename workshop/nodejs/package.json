@@ -6,12 +6,12 @@
   "scripts": {
     "test": "jest",
     "consumer-run": "node login-service/",
-    "consumer-component-test": "jest --testPathPattern=login-service/tests/component-tests",
-    "consumer-contract-test": "jest --testPathPattern=login-service/tests/contract-tests",
+    "consumer-component-test": "jest --testPathPattern=login-service/__tests__/component-tests",
+    "consumer-contract-test": "jest --testPathPattern=login-service/__tests__/contract-tests",
 
     "provider-run": "node user-service/",
-    "provider-component-test": "jest --testPathPattern=user-service/tests/component-tests",
-    "provider-contract-test": "jest --testTimeout=10000 --testPathPattern=user-service/tests/contract-tests"
+    "provider-component-test": "jest --testPathPattern=user-service/__tests__/component-tests",
+    "provider-contract-test": "jest --testTimeout=10000 --testPathPattern=user-service/__tests__/contract-tests"
   },
   "author": "up1",
   "license": "ISC",

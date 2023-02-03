@@ -1,7 +1,7 @@
 const { Verifier } = require("@pact-foundation/pact");
 const { fail } = require("assert");
 const path = require("path");
-const { server } = require("../user");
+const { server } = require("../../user");
 
 // Setup provider server to verify
 const app = server.listen(4000);

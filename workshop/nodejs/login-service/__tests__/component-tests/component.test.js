@@ -1,5 +1,5 @@
 const nock = require('nock')
-const UserService = require("../gateway");
+const UserService = require("../../gateway");
 
 test("Success case with Get user by id = 1", async() => {
 
