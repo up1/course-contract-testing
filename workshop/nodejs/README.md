@@ -18,3 +18,7 @@ $npm run provider-run
 
 Ready to testing ...
 
+## Testing
+* [Component testing](https://github.com/up1/course-contract-testing/wiki/NodeJS#step-2--component-testing)
+* [Contract testing](https://github.com/up1/course-contract-testing/wiki/NodeJS#step-3--contract-testing-with-pact-in-consumer-side)
+
