@@ -12,7 +12,7 @@ test("validates the expectations of user-service", async() => {
     providerBaseUrl: "http://localhost:4000",
     provider: "user-service",
     pactUrls: [
-      path.resolve(__dirname, "../../pacts/login-service-user-service.json"),
+      path.resolve(__dirname, "../../../pacts/login-service-user-service.json"),
     ],
   };
    await new Verifier(opts).verifyProvider()
