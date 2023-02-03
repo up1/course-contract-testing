@@ -5,6 +5,7 @@
   * NodeJS
   * Go
   * [C#](https://github.com/up1/course-tdd-with-dotnet)
+  * [Java](https://github.com/up1/workshop-contract-test-spring)
 * Workshop
   * Write Pact consumer test
   * Verify consumer pact with API provider
