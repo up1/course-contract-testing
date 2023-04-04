@@ -10,6 +10,9 @@ $npm install
 $npm run provider-run
 ```
 
+Test url = http://localhost:4000/users/1
+
+
 ## Step to run consumer :: Login service
 
 Run login service
