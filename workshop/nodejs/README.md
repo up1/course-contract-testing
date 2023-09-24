@@ -23,6 +23,26 @@ $npm run consumer-run
 
 Ready to testing ...
 
+
+## STep to run Contract testing
+```
+// Run contract testing to create a contract
+$npm run consumer-contract-test  
+
+// Upload contract to broker
+$docker compose up pact_broker_publish --remove-orphans
+
+// Verify
+$docker compose up pact_broker_verify --remove-orphans
+
+// Start provider server
+$npm run provider-run
+
+// Verify again
+$docker compose up pact_broker_verify --remove-orphans
+
+```
+
 ## Testing
 * [Component testing](https://github.com/up1/course-contract-testing/wiki/NodeJS#step-2--component-testing)
 * [Contract testing](https://github.com/up1/course-contract-testing/wiki/NodeJS#step-3--contract-testing-with-pact-in-consumer-side)
