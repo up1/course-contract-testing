@@ -1,0 +1,172 @@
+{
+	"info": {
+		"_postman_id": "958d0646-89be-4e50-9da7-3ebc92093ffa",
+		"name": "demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1453931",
+		"_collection_link": "https://red-firefly-245852.postman.co/workspace/devops~3d15da68-1a3f-446f-80ef-6478a82f157b/collection/1453931-958d0646-89be-4e50-9da7-3ebc92093ffa?action=share&source=collection_link&creator=1453931"
+	},
+	"item": [
+		{
+			"name": "Get user id = 1 :: success",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"",
+							"pm.test(\"Response body has the correct structure\", function () {",
+							"    var responseJSON = pm.response.json();",
+							"",
+							"    pm.expect(responseJSON).to.be.an('object');",
+							"    pm.expect(responseJSON).to.have.property('user');",
+							"    pm.expect(responseJSON).to.have.property('name');",
+							"    pm.expect(responseJSON).to.have.property('role');",
+							"});",
+							"",
+							"pm.test(\"Response has the correct content type\", function() {",
+							"    pm.expect(pm.response.headers.get('Content-Type')).to.include('application/json');",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:4000/users/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "4000",
+					"path": [
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://jsonplaceholder.typicode.com/users/1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});",
+							"",
+							"pm.test(\"Schema is valid\", function () {",
+							"  var schema = {",
+							"    type: \"object\",",
+							"    properties: {",
+							"      id: {",
+							"        type: \"number\"",
+							"      },",
+							"      name: {",
+							"        type: \"string\"",
+							"      },",
+							"      username: {",
+							"        type: \"string\"",
+							"      },",
+							"      email: {",
+							"        type: \"string\",",
+							"        format: \"email\"",
+							"      },",
+							"      address: {",
+							"        type: \"object\",",
+							"        properties: {",
+							"          street: {",
+							"            type: \"string\"",
+							"          },",
+							"          suite: {",
+							"            type: \"string\"",
+							"          },",
+							"          city: {",
+							"            type: \"string\"",
+							"          },",
+							"          zipcode: {",
+							"            type: \"string\"",
+							"          },",
+							"          geo: {",
+							"            type: \"object\",",
+							"            properties: {",
+							"              lat: {",
+							"                type: \"string\"",
+							"              },",
+							"              lng: {",
+							"                type: \"string\"",
+							"              }",
+							"            },",
+							"            required: [\"lat\", \"lng\"]",
+							"          }",
+							"        },",
+							"        required: [\"street\", \"suite\", \"city\", \"zipcode\", \"geo\"]",
+							"      },",
+							"      phone: {",
+							"        type: \"string\"",
+							"      },",
+							"      website: {",
+							"        type: \"string\",",
+							"        format: \"url\"",
+							"      },",
+							"      company: {",
+							"        type: \"object\",",
+							"        properties: {",
+							"          name: {",
+							"            type: \"string\"",
+							"          },",
+							"          catchPhrase: {",
+							"            type: \"string\"",
+							"          },",
+							"          bs: {",
+							"            type: \"string\"",
+							"          }",
+							"        },",
+							"        required: [\"name\", \"catchPhrase\", \"bs\"]",
+							"      }",
+							"    },",
+							"    required: [\"id\", \"name\", \"username\", \"email\", \"address\", \"phone\", \"website\", \"company\"]",
+							"  };",
+							"",
+							"  var response = pm.response.json();",
+							"  pm.expect(tv4.validate(response, schema)).to.be.true;",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://jsonplaceholder.typicode.com/users/1",
+					"protocol": "https",
+					"host": [
+						"jsonplaceholder",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
