@@ -1,6 +1,7 @@
 # Workshop Contract testing with Pact + NodeJS
 * Login service
 * User service
+* [Pact :: mactching rules](https://docs.pact.io/implementation_guides/javascript/docs/matching#v3-matching-rules)
 
 ## Step to run provider :: User service (port = 4000)
 
