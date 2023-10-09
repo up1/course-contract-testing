@@ -30,7 +30,7 @@ services:
       PACT_BROKER_BASE_URL: http://134.209.105.128:9292/
       PACT_BROKER_USERNAME: pact_workshop
       PACT_BROKER_PASSWORD: pact_workshop
-    command: 'publish /pacts --consumer-app-version 1.0.0'
+    command: 'publish /pacts --consumer-app-version 1.2.0'
     volumes:
       - ./pacts:/pacts
 
