@@ -11,7 +11,7 @@ server.get("/users/:id", (req, res) => {
 	if(req.params.id == 1) {
     res.json({
           user: "somkiat",
-          name: "Somkiat Pui...",
+          name: "Somkiat Pui",
           role: "admin"
         });
   } else {
