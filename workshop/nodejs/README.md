@@ -25,7 +25,7 @@ $npm run consumer-run
 Ready to testing ...
 
 
-## STep to run Contract testing
+## Step to run Contract testing
 ```
 // Run contract testing to create a contract
 $npm run consumer-contract-test  
