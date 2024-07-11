@@ -1,0 +1,57 @@
+{
+  "consumer": {
+    "name": "login-service"
+  },
+  "interactions": [
+    {
+      "description": "get user by id",
+      "providerState": "user exist",
+      "request": {
+        "method": "GET",
+        "path": "/users/1"
+      },
+      "response": {
+        "body": {
+          "name": "Somkiat Pui",
+          "role": "admin",
+          "user": "somkiat"
+        },
+        "headers": {
+          "Content-Type": "application/json; charset=utf-8"
+        },
+        "matchingRules": {
+          "$.body": {
+            "match": "type"
+          }
+        },
+        "status": 200
+      }
+    },
+    {
+      "description": "get user by id = 2",
+      "providerState": "user not found",
+      "request": {
+        "method": "GET",
+        "path": "/users/2"
+      },
+      "response": {
+        "status": 404
+      }
+    }
+  ],
+  "metadata": {
+    "pact-js": {
+      "version": "12.3.0"
+    },
+    "pactRust": {
+      "ffi": "0.4.16",
+      "models": "1.1.19"
+    },
+    "pactSpecification": {
+      "version": "2.0.0"
+    }
+  },
+  "provider": {
+    "name": "user-service"
+  }
+}
