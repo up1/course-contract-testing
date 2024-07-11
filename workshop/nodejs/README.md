@@ -22,6 +22,12 @@ $npm install
 $npm run consumer-run
 ```
 
+Run with Docker compose
+```
+$docker compose run login-service
+$docker compose run user-service
+```
+
 Ready to testing ...
 
 
